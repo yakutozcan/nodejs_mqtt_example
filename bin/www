@@ -13,7 +13,7 @@ const io = require('socket.io').listen(server);
 //mqtt setup
 const mqtt = require('mqtt');
 const client_id = 'iot101_' + Math.random().toString(16).substr(2, 3);
-const mqtt_host = 'mqtt://broker.shiftr.io';
+const mqtt_host = 'mqtt://127.0.0.1';
 const options = {
     keepalive: 10,
     clientId: client_id,
@@ -21,8 +21,8 @@ const options = {
     protocolVersion: 4,
     clean: true,
     reconnectPeriod: 1000,
-    username: 'haydut001',
-    password: 'c50cd73d',
+    username: 'mqttuser',
+    password: 'publıc123',
     rejectUnauthorized: false
 };
 const mqtt_client = mqtt.connect(mqtt_host, options);
